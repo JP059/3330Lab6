@@ -13,9 +13,17 @@ app.get("/", (req, res) => {
 
 
 // Write your code here:
+app.get('/home', (req, res) => {
+    const data = { username: "John Reyes"};
+    res.render('home.ejs', data);
+});
 
-
-
+app.get("/About", (req, res) => {
+	res.render("about.ejs");
+});
+app.get("/Contact", (req, res) => {
+	res.render("contact.ejs");
+});
 
 
 app.listen(port, () => {
